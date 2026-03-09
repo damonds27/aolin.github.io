@@ -185,19 +185,11 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
         }
         
-        .video-container iframe,
         .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            border: none;
+            display: block;
         }
         
         /* Publications */
@@ -332,9 +324,12 @@
                 <p class="project-desc">
                     将开源具身导航模型从 Isaac Sim 仿真迁移至 Unitree G1 真机，完成<span class="highlight">端到端全流程部署</span>。设计端云协同架构，通过 ROS2 + Flask 实现模型推理与 MPC 运动控制；开发语音交互模块，支持多轮指令与实时语义中断。
                 </p>
-                <!-- Bilibili 视频演示 -->
+                <!-- Sim2Real 视频演示 -->
                 <div class="video-container">
-                    <iframe src="//player.bilibili.com/player.html?bvid=BV14jPDzEEhk&page=1&autoplay=0" scrolling="no" allowfullscreen="true"></iframe>
+                    <video controls>
+                        <source src="Video/sim2real.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放
+                    </video>
                 </div>
             </div>
             
