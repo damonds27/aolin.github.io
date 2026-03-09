@@ -312,12 +312,20 @@
             padding: 80px 20px;
         }
         
+        /* 替换现有 .skills-grid 为下面内容 —— 桌面端两列，移动端一列 */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 每行显示 2 个 */
+            grid-template-columns: repeat(2, minmax(0, 1fr)); /* 两列布局 */
             gap: 25px;
             max-width: 900px;
             margin: 0 auto;
+        }
+        
+        /* 保持响应式：窄屏时改为单列 */
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         .skill-card {
