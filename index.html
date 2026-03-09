@@ -185,11 +185,18 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
         }
         
-        .video-container video {
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            display: block;
+            height: 100%;
+            border: none;
         }
         
         /* Publications */
@@ -333,12 +340,9 @@
                 <p class="project-desc">
                     针对机器人指令遵循不准、易陷入循环的问题，设计基于大模型的任务规划与决策算法。通过思维链推理与循环检测机制，导航成功率较基线提升<span class="highlight">21%</span>，路径效率提升<span class="highlight">10%</span>。<span class="highlight">以第一作者身份发表论文并被 ICRA 2026 接收</span>，代码已开源至 <a href="https://github.com/damonds27/ReThinkNav" target="_blank">GitHub</a>。
                 </p>
-                <!-- 视频演示 -->
+                <!-- Bilibili 视频演示 -->
                 <div class="video-container">
-                    <video controls>
-                        <source src="Video/icra.mp4" type="video/mp4">
-                        您的浏览器不支持视频播放
-                    </video>
+                    <iframe src="//player.bilibili.com/player.html?bvid=BV14jPDzEEhk&page=1&autoplay=0" scrolling="no" allowfullscreen="true"></iframe>
                 </div>
             </div>
         </section>
