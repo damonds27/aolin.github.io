@@ -190,7 +190,8 @@
             height: 0;
         }
         
-        .video-container iframe {
+        .video-container iframe,
+        .video-container video {
             position: absolute;
             top: 0;
             left: 0;
@@ -322,6 +323,7 @@
         <section class="section">
             <h2 class="section-title">🚀 项目经历</h2>
             
+            <!-- 项目一：Unitree G1 Sim2Real -->
             <div class="project-item">
                 <div class="project-header">
                     <span class="project-title">基于Unitree G1人形机器人的具身导航Sim2Real部署</span>
@@ -330,8 +332,13 @@
                 <p class="project-desc">
                     将开源具身导航模型从 Isaac Sim 仿真迁移至 Unitree G1 真机，完成<span class="highlight">端到端全流程部署</span>。设计端云协同架构，通过 ROS2 + Flask 实现模型推理与 MPC 运动控制；开发语音交互模块，支持多轮指令与实时语义中断。
                 </p>
+                <!-- Bilibili 视频演示 -->
+                <div class="video-container">
+                    <iframe src="//player.bilibili.com/player.html?bvid=BV14jPDzEEhk&page=1&autoplay=0" scrolling="no" allowfullscreen="true"></iframe>
+                </div>
             </div>
             
+            <!-- 项目二：ReThinkNav -->
             <div class="project-item">
                 <div class="project-header">
                     <span class="project-title">基于零样本大语言模型决策的机器人具身导航算法框架</span>
@@ -340,9 +347,12 @@
                 <p class="project-desc">
                     针对机器人指令遵循不准、易陷入循环的问题，设计基于大模型的任务规划与决策算法。通过思维链推理与循环检测机制，导航成功率较基线提升<span class="highlight">21%</span>，路径效率提升<span class="highlight">10%</span>。<span class="highlight">以第一作者身份发表论文并被 ICRA 2026 接收</span>，代码已开源至 <a href="https://github.com/damonds27/ReThinkNav" target="_blank">GitHub</a>。
                 </p>
-                <!-- Bilibili 视频演示 -->
+                <!-- ICRA 视频演示 -->
                 <div class="video-container">
-                    <iframe src="//player.bilibili.com/player.html?bvid=BV14jPDzEEhk&page=1&autoplay=0" scrolling="no" allowfullscreen="true"></iframe>
+                    <video controls>
+                        <source src="Video/icra.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放
+                    </video>
                 </div>
             </div>
         </section>
