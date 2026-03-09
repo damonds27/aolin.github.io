@@ -165,28 +165,10 @@
             font-size: 0.95em;
         }
         
-        .project-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .project-list li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 8px;
+        .project-desc {
             color: var(--text-gray);
-        }
-        
-        .project-list li::before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-        
-        .project-list strong {
-            color: var(--text-dark);
+            margin-bottom: 15px;
+            line-height: 1.8;
         }
         
         .highlight {
@@ -195,6 +177,19 @@
             border-radius: 4px;
             font-weight: 600;
             color: var(--primary-color);
+        }
+        
+        /* Video */
+        .video-container {
+            margin-top: 15px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .video-container video {
+            width: 100%;
+            display: block;
         }
         
         /* Publications */
@@ -325,13 +320,9 @@
                     <span class="project-title">基于Unitree G1人形机器人的具身导航Sim2Real部署</span>
                     <span class="project-date">2025.10 - 2026.03</span>
                 </div>
-                <ul class="project-list">
-                    <li><strong>工作目标</strong>：将开源具身导航模型从Isaac Sim仿真验证迁移至Unitree G1真机，完成<span class="highlight">端到端全流程部署</span></li>
-                    <li><strong>仿真验证</strong>：主导搭建基于Isaac Sim的测试平台，支持场景导入、机器人初始化、指令输入、导航效果可视化</li>
-                    <li><strong>真机部署</strong>：完成<span class="highlight">端云协同架构</span>设计，通过ROS2订阅RGB-D与里程计数据，经Flask与服务端模型通信，由MPC控制器执行运动指令</li>
-                    <li><strong>交互扩展</strong>：开发语音交互模块，支持多轮指令交互与实时语义中断</li>
-                    <li><strong>工作效果</strong>：仿真端支持多场景快速验证；真机端以Unitree G1为载体，在多种典型室内场景下成功完成测试</li>
-                </ul>
+                <p class="project-desc">
+                    将开源具身导航模型从 Isaac Sim 仿真迁移至 Unitree G1 真机，完成<span class="highlight">端到端全流程部署</span>。设计端云协同架构，通过 ROS2 + Flask 实现模型推理与 MPC 运动控制；开发语音交互模块，支持多轮指令与实时语义中断。
+                </p>
             </div>
             
             <div class="project-item">
@@ -339,13 +330,16 @@
                     <span class="project-title">基于零样本大语言模型决策的机器人具身导航算法框架</span>
                     <span class="project-date">2025.03 - 2025.09</span>
                 </div>
-                <ul class="project-list">
-                    <li><strong>工作目标</strong>：针对机器人指令遵循不准、易陷入循环的问题，设计并实现了基于大模型的任务规划与决策算法</li>
-                    <li><strong>感知模块</strong>：设计Transformer路点预测与VLM语义理解方案，将视觉观测转化为文本描述，供大模型决策</li>
-                    <li><strong>决策模块</strong>：设计目标导向的思维链推理机制，通过动作意图分解与动态进度评估提升指令遵循精度</li>
-                    <li><strong>循环检测</strong>：设计基于位姿一致性的循环检测方案，结合CLIP语义相似度筛选路径，引导大模型重规划</li>
-                    <li><strong>工作效果</strong>：导航成功率较最优基线提升<span class="highlight">21%</span>，路径效率提升<span class="highlight">10%</span>；<span class="highlight">以第一作者身份发表论文并被ICRA 2026接收</span>，代码已开源至 <a href="https://github.com/damonds27/ReThinkNav" target="_blank">GitHub</a></li>
-                </ul>
+                <p class="project-desc">
+                    针对机器人指令遵循不准、易陷入循环的问题，设计基于大模型的任务规划与决策算法。通过思维链推理与循环检测机制，导航成功率较基线提升<span class="highlight">21%</span>，路径效率提升<span class="highlight">10%</span>。<span class="highlight">以第一作者身份发表论文并被 ICRA 2026 接收</span>，代码已开源至 <a href="https://github.com/damonds27/ReThinkNav" target="_blank">GitHub</a>。
+                </p>
+                <!-- 视频演示 -->
+                <div class="video-container">
+                    <video controls>
+                        <source src="Video/icra.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放
+                    </video>
+                </div>
             </div>
         </section>
         
