@@ -3,64 +3,410 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aolin 的个人网站</title>
+    <title>李奥林 | 个人主页</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        
+        :root {
+            --primary-color: #4169E1;
+            --primary-dark: #3457b1;
+            --text-dark: #333;
+            --text-gray: #666;
+            --text-light: #999;
+            --bg-light: #f8f9fa;
+            --card-bg: #fff;
+            --border-color: #e9ecef;
+        }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            line-height: 1.6;
+            color: var(--text-dark);
         }
+        
         .container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 60px 80px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: var(--card-bg);
             border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            text-align: center;
         }
-        h1 {
-            color: #333;
+        
+        .header h1 {
             font-size: 2.5em;
-            margin-bottom: 20px;
+            color: var(--text-dark);
+            margin-bottom: 10px;
         }
-        p {
-            color: #666;
+        
+        .header .subtitle {
             font-size: 1.2em;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-        .emoji {
-            font-size: 3em;
+            color: var(--primary-color);
+            font-weight: 600;
             margin-bottom: 20px;
         }
-        .highlight {
-            color: #667eea;
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            color: var(--text-gray);
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Section */
+        .section {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px 40px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        
+        .section-title {
+            font-size: 1.4em;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        /* Education */
+        .edu-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        
+        .edu-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+        
+        .edu-school {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        
+        .edu-date {
+            color: var(--text-light);
+            font-size: 0.95em;
+        }
+        
+        .edu-detail {
+            color: var(--text-gray);
+            margin-bottom: 5px;
+        }
+        
+        .edu-honors {
+            color: var(--primary-color);
+            font-size: 0.9em;
+        }
+        
+        /* Projects */
+        .project-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        
+        .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+        
+        .project-title {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        
+        .project-date {
+            color: var(--text-light);
+            font-size: 0.95em;
+        }
+        
+        .project-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .project-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: var(--text-gray);
+        }
+        
+        .project-list li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
             font-weight: bold;
         }
+        
+        .project-list strong {
+            color: var(--text-dark);
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, rgba(65,105,225,0.1) 0%, rgba(65,105,225,0.2) 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        /* Publications */
+        .pub-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .pub-item::before {
+            content: "📄";
+            position: absolute;
+            left: 0;
+        }
+        
+        .pub-venue {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .pub-title {
+            color: var(--text-gray);
+            font-style: italic;
+        }
+        
+        /* Skills */
+        .skill-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .skill-item::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+        
+        .skill-title {
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        
+        .skill-desc {
+            color: var(--text-gray);
+        }
+        
+        /* Links */
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+        
+        /* Footer */
         .footer {
-            margin-top: 30px;
-            color: #999;
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            padding: 20px;
             font-size: 0.9em;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .section {
+                padding: 20px;
+            }
+            .edu-header, .project-header {
+                flex-direction: column;
+            }
+            .edu-date, .project-date {
+                margin-top: 5px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="emoji">👋🌟</div>
-        <h1>欢迎来到 Aolin 的个人网站！</h1>
-        <p>你好！这是我的 <span class="highlight">GitHub Pages</span> 网站。</p>
-        <p>网站正在建设中，敬请期待更多精彩内容！🚀</p>
-        <p>这里将会分享我的项目、想法和学习笔记。</p>
-        <div class="footer">
-            <p>© 2026 Aolin | 由 GitHub Pages 提供支持</p>
-        </div>
+        <!-- Header -->
+        <header class="header">
+            <h1>👋 李奥林</h1>
+            <div class="subtitle">🤖 具身导航算法研究生</div>
+            <div class="contact-info">
+                <span>📧 liaolin@whu.edu.cn</span>
+                <span>📱 13884763786</span>
+                <span>🎓 武汉大学</span>
+            </div>
+        </header>
+        
+        <!-- Education -->
+        <section class="section">
+            <h2 class="section-title">🎓 教育背景</h2>
+            
+            <div class="edu-item">
+                <div class="edu-header">
+                    <span class="edu-school">武汉大学 · 测绘学院</span>
+                    <span class="edu-date">2024.09 - 至今</span>
+                </div>
+                <div class="edu-detail">导航、制导与控制 · 硕士在读（GPA 3.7/4.0）</div>
+                <div class="edu-honors">🏆 "华为杯"第二十一届中国研究生数学建模竞赛二等奖、武汉大学优秀学生、校三等奖学金</div>
+            </div>
+            
+            <div class="edu-item">
+                <div class="edu-header">
+                    <span class="edu-school">武汉大学 · 测绘学院</span>
+                    <span class="edu-date">2020.09 - 2024.06</span>
+                </div>
+                <div class="edu-detail">导航工程 · 学士（GPA 3.9/4.0，前5%）</div>
+                <div class="edu-honors">🏆 中海达专项奖学金、武汉大学优秀学生、校二等奖学金</div>
+            </div>
+        </section>
+        
+        <!-- Projects -->
+        <section class="section">
+            <h2 class="section-title">🚀 项目经历</h2>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">基于Unitree G1人形机器人的具身导航Sim2Real部署</span>
+                    <span class="project-date">2025.10 - 2026.03</span>
+                </div>
+                <ul class="project-list">
+                    <li><strong>工作目标</strong>：将开源具身导航模型从Isaac Sim仿真验证迁移至Unitree G1真机，完成<span class="highlight">端到端全流程部署</span></li>
+                    <li><strong>仿真验证</strong>：主导搭建基于Isaac Sim的测试平台，支持场景导入、机器人初始化、指令输入、导航效果可视化</li>
+                    <li><strong>真机部署</strong>：完成<span class="highlight">端云协同架构</span>设计，通过ROS2订阅RGB-D与里程计数据，经Flask与服务端模型通信，由MPC控制器执行运动指令</li>
+                    <li><strong>交互扩展</strong>：开发语音交互模块，支持多轮指令交互与实时语义中断</li>
+                    <li><strong>工作效果</strong>：仿真端支持多场景快速验证；真机端以Unitree G1为载体，在多种典型室内场景下成功完成测试</li>
+                </ul>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-title">基于零样本大语言模型决策的机器人具身导航算法框架</span>
+                    <span class="project-date">2025.03 - 2025.09</span>
+                </div>
+                <ul class="project-list">
+                    <li><strong>工作目标</strong>：针对机器人指令遵循不准、易陷入循环的问题，设计并实现了基于大模型的任务规划与决策算法</li>
+                    <li><strong>感知模块</strong>：设计Transformer路点预测与VLM语义理解方案，将视觉观测转化为文本描述，供大模型决策</li>
+                    <li><strong>决策模块</strong>：设计目标导向的思维链推理机制，通过动作意图分解与动态进度评估提升指令遵循精度</li>
+                    <li><strong>循环检测</strong>：设计基于位姿一致性的循环检测方案，结合CLIP语义相似度筛选路径，引导大模型重规划</li>
+                    <li><strong>工作效果</strong>：导航成功率较最优基线提升<span class="highlight">21%</span>，路径效率提升<span class="highlight">10%</span>；<span class="highlight">以第一作者身份发表论文并被ICRA 2026接收</span>，代码已开源至 <a href="https://github.com/damonds27/ReThinkNav" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Publications -->
+        <section class="section">
+            <h2 class="section-title">📝 科研成果</h2>
+            
+            <div class="pub-item">
+                <span class="pub-venue">ICRA 2026（一作，accepted）</span><br>
+                <span class="pub-title">ReThinkNav: Zero-Shot Vision-and-Language Navigation with Open-Source LLMs via Contextual Reasoning and Loop Recovery</span>
+            </div>
+            
+            <div class="pub-item">
+                <span class="pub-venue">武汉大学学报 2025（一作，见刊）</span><br>
+                <span class="pub-title">以空间智能导航：基于场景图谱的目标驱动导航综述</span>
+            </div>
+            
+            <div class="pub-item">
+                <span class="pub-venue">ICRA 2026（二作，accepted）</span><br>
+                <span class="pub-title">Commonsense-Guided Object Graph Reasoning with Policy Regularization for Object Goal Navigation</span>
+            </div>
+            
+            <div class="pub-item">
+                <span class="pub-venue">IEEE RA-L 2025（二作，见刊）</span><br>
+                <span class="pub-title">Context-aware graph inference and generative adversarial imitation learning for object-goal navigation in unfamiliar environment</span>
+            </div>
+        </section>
+        
+        <!-- Skills -->
+        <section class="section">
+            <h2 class="section-title">💡 专业技能</h2>
+            
+            <div class="skill-item">
+                <span class="skill-title">具身导航算法：</span>
+                <span class="skill-desc">熟悉具身导航任务设定与评估体系（SR/SPL/NE）；掌握大模型驱动的导航任务规划与决策算法；具备算法创新与开源项目复现能力</span>
+            </div>
+            
+            <div class="skill-item">
+                <span class="skill-title">多模态大模型：</span>
+                <span class="skill-desc">具备开源大模型（Qwen3 等）本地化部署与推理优化经验；熟练运用Chain-of-Thought提示工程提升指令遵循能力；理解Transformer架构及CLIP视觉语言对齐原理</span>
+            </div>
+            
+            <div class="skill-item">
+                <span class="skill-title">仿真与真机部署：</span>
+                <span class="skill-desc">熟练使用ROS2通信架构；具备Habitat-Sim与Isaac Sim仿真环境使用经验；具备从仿真到Unitree G1真机的Sim2Real全流程部署经验</span>
+            </div>
+            
+            <div class="skill-item">
+                <span class="skill-title">工程基础：</span>
+                <span class="skill-desc">熟练使用Python；熟悉PyTorch框架；熟悉Linux开发环境；英语 CET-6 546</span>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 李奥林 | 武汉大学测绘学院 | 由 GitHub Pages 提供支持</p>
+            <p>
+                <a href="https://github.com/damonds27" style="color: rgba(255,255,255,0.9);">GitHub</a> · 
+                <a href="mailto:liaolin@whu.edu.cn" style="color: rgba(255,255,255,0.9);">Email</a>
+            </p>
+        </footer>
     </div>
 </body>
 </html>
