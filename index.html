@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -48,7 +49,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background: url("image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
         
         .hero-content {
@@ -436,20 +437,29 @@
         <div class="projects-grid">
             <!-- 项目一：Unitree G1 Sim2Real -->
             <article class="project-card">
+                <!-- 新增：Isaac Sim 仿真视频 -->
+                <div class="project-video">
+                    <video controls>
+                        <source src="Video/isaacsim.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放
+                    </video>
+                </div>
+                
+                <!-- 原有：真机部署视频 -->
                 <div class="project-video-vertical">
                     <video controls>
                         <source src="Video/sim2real.mp4" type="video/mp4">
                         您的浏览器不支持视频播放
                     </video>
                 </div>
+
                 <div class="project-content">
                     <span class="project-tag">🦾 Sim2Real 部署</span>
                     <h3 class="project-title">基于 Unitree G1 人形机器人的具身导航 Sim2Real 部署</h3>
                     <p class="project-date">2025.10 - 2026.03</p>
                     <p class="project-desc">
-                        将开源具身导航模型从 Isaac Sim 仿真环境迁移至 Unitree G1 真机，完成端到端全流程部署。
-                        设计端云协同架构，通过 ROS2 订阅 RGB-D 与里程计数据，经 Flask 与服务端模型通信，
-                        由 MPC 控制器执行运动指令。开发语音交互模块，支持多轮指令与实时语义中断。
+                        <strong>仿真验证：</strong>在 Isaac Sim 高保真仿真环境中，智能体接收多轮自然语言指令（如“穿过客厅前往阳台的花瓶处”、“左转进入卧室停在床前”），通过大模型进行语义理解与路径规划，成功完成多房间长程导航任务。右侧终端实时显示指令解析与系统状态。<br><br>
+                        <strong>真机部署：</strong>将开源具身导航模型从 Isaac Sim 仿真环境迁移至 Unitree G1 真机，完成端到端全流程部署。设计端云协同架构，通过 ROS2 订阅 RGB-D 与里程计数据，经 Flask 与服务端模型通信，由 MPC 控制器执行运动指令。开发语音交互模块，支持多轮指令与实时语义中断。
                     </p>
                     <div class="project-highlights">
                         <span class="highlight-tag">Isaac Sim</span>
@@ -486,7 +496,7 @@
                         <span class="highlight-tag">VLM</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/damonds27/ReThinkNav" target="_blank" class="project-link primary">
+                        <a href="https://github.com/damonds27/ReThinkNav  " target="_blank" class="project-link primary">
                             📂 GitHub 代码
                         </a>
                     </div>
@@ -562,10 +572,11 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-links">
-            <a href="https://github.com/damonds27" target="_blank">GitHub</a>
+            <a href="https://github.com/damonds27  " target="_blank">GitHub</a>
             <a href="mailto:liaolin@whu.edu.cn">Email</a>
         </div>
         <p>© 2026 李奥林 · 武汉大学测绘学院</p>
     </footer>
 </body>
 </html>
+```
