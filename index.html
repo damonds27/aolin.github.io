@@ -10,7 +10,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         :root {
             --primary-color: #6366f1;
             --primary-dark: #4f46e5;
@@ -23,7 +23,7 @@
             --bg-card-hover: #334155;
             --border-color: #334155;
         }
-        
+
         body {
             font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
             background: var(--bg-dark);
@@ -31,7 +31,7 @@
             line-height: 1.6;
             color: #e2e8f0;
         }
-        
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e3a5f 100%);
@@ -40,7 +40,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
@@ -50,14 +50,14 @@
             bottom: 0;
             background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
-        
+
         .hero-content {
             position: relative;
             z-index: 1;
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .hero h1 {
             font-size: 3em;
             font-weight: 800;
@@ -67,14 +67,14 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .hero .tagline {
             font-size: 1.4em;
             color: #a5b4fc;
             margin-bottom: 25px;
             font-weight: 500;
         }
-        
+
         .hero .intro {
             font-size: 1.1em;
             color: #cbd5e1;
@@ -82,14 +82,14 @@
             margin: 0 auto 30px;
             line-height: 1.8;
         }
-        
+
         .contact-badges {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
         }
-        
+
         .badge {
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
@@ -100,43 +100,43 @@
             border: 1px solid rgba(255,255,255,0.1);
             transition: all 0.3s;
         }
-        
+
         .badge:hover {
             background: rgba(255,255,255,0.15);
             transform: translateY(-2px);
         }
-        
+
         /* Container */
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 60px 20px;
         }
-        
+
         /* Section Title */
         .section-header {
             text-align: center;
             margin-bottom: 50px;
         }
-        
+
         .section-header h2 {
             font-size: 2.2em;
             font-weight: 700;
             color: #fff;
             margin-bottom: 10px;
         }
-        
+
         .section-header p {
             color: var(--text-light);
             font-size: 1.1em;
         }
-        
+
         /* Project Cards */
         .projects-grid {
             display: grid;
             gap: 40px;
         }
-        
+
         .project-card {
             background: var(--bg-card);
             border-radius: 20px;
@@ -144,17 +144,17 @@
             border: 1px solid var(--border-color);
             transition: all 0.3s;
         }
-        
+
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
             border-color: var(--primary-color);
         }
-        
+
         .project-content {
             padding: 35px;
         }
-        
+
         .project-tag {
             display: inline-block;
             background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
@@ -165,7 +165,7 @@
             font-weight: 600;
             margin-bottom: 15px;
         }
-        
+
         .project-title {
             font-size: 1.5em;
             font-weight: 700;
@@ -173,26 +173,26 @@
             margin-bottom: 10px;
             line-height: 1.4;
         }
-        
+
         .project-date {
             color: var(--text-light);
             font-size: 0.9em;
             margin-bottom: 20px;
         }
-        
+
         .project-desc {
             color: #94a3b8;
             line-height: 1.9;
             margin-bottom: 20px;
         }
-        
+
         .project-highlights {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 25px;
         }
-        
+
         .highlight-tag {
             background: rgba(99, 102, 241, 0.2);
             color: #a5b4fc;
@@ -201,12 +201,12 @@
             font-size: 0.85em;
             font-weight: 500;
         }
-        
+
         .project-links {
             display: flex;
             gap: 15px;
         }
-        
+
         .project-link {
             display: inline-flex;
             align-items: center;
@@ -218,61 +218,61 @@
             text-decoration: none;
             transition: all 0.3s;
         }
-        
+
         .project-link.primary {
             background: var(--primary-color);
             color: #fff;
         }
-        
+
         .project-link.primary:hover {
             background: var(--primary-dark);
         }
-        
+
         .project-link.secondary {
             background: transparent;
             color: #a5b4fc;
             border: 1px solid #4f46e5;
         }
-        
+
         .project-link.secondary:hover {
             background: rgba(99, 102, 241, 0.1);
         }
-        
+
         /* Video */
         .project-video {
             background: #000;
         }
-        
+
         .project-video video {
             width: 100%;
             display: block;
         }
-        
+
         .project-video-vertical {
             background: #000;
             display: flex;
             justify-content: center;
             padding: 20px 0;
         }
-        
+
         .project-video-vertical video {
             max-width: 45%;
             max-height: 450px;
         }
-        
+
         /* Publications */
         .publications-section {
             background: linear-gradient(180deg, var(--bg-dark) 0%, #1e293b 100%);
             padding: 80px 20px;
         }
-        
+
         .pub-grid {
             display: grid;
             gap: 20px;
             max-width: 900px;
             margin: 0 auto;
         }
-        
+
         .pub-card {
             background: var(--bg-card);
             border-radius: 15px;
@@ -280,12 +280,12 @@
             border: 1px solid var(--border-color);
             transition: all 0.3s;
         }
-        
+
         .pub-card:hover {
             border-color: var(--primary-color);
             transform: translateX(5px);
         }
-        
+
         .pub-venue {
             display: inline-block;
             background: linear-gradient(135deg, #f59e0b, #ef4444);
@@ -296,22 +296,22 @@
             font-weight: 600;
             margin-bottom: 12px;
         }
-        
+
         .pub-venue.first-author {
             background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
         }
-        
+
         .pub-title {
             color: #e2e8f0;
             font-size: 1em;
             line-height: 1.6;
         }
-        
+
         /* Skills */
         .skills-section {
             padding: 80px 20px;
         }
-        
+
         /* 替换现有 .skills-grid 为下面内容 —— 桌面端两列，移动端一列 */
         .skills-grid {
             display: grid;
@@ -320,14 +320,14 @@
             max-width: 900px;
             margin: 0 auto;
         }
-        
+
         /* 保持响应式：窄屏时改为单列 */
         @media (max-width: 768px) {
             .skills-grid {
                 grid-template-columns: 1fr;
             }
         }
-        
+
         .skill-card {
             background: var(--bg-card);
             border-radius: 15px;
@@ -335,30 +335,30 @@
             border: 1px solid var(--border-color);
             transition: all 0.3s;
         }
-        
+
         .skill-card:hover {
             border-color: var(--accent-color);
             transform: translateY(-3px);
         }
-        
+
         .skill-icon {
             font-size: 2em;
             margin-bottom: 15px;
         }
-        
+
         .skill-title {
             color: #fff;
             font-size: 1.1em;
             font-weight: 600;
             margin-bottom: 10px;
         }
-        
+
         .skill-desc {
             color: #94a3b8;
             font-size: 0.9em;
             line-height: 1.7;
         }
-        
+
         /* Footer */
         .footer {
             text-align: center;
@@ -366,25 +366,25 @@
             color: var(--text-light);
             border-top: 1px solid var(--border-color);
         }
-        
+
         .footer-links {
             display: flex;
             justify-content: center;
             gap: 30px;
             margin-bottom: 20px;
         }
-        
+
         .footer-links a {
             color: #a5b4fc;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
         }
-        
+
         .footer-links a:hover {
             color: #fff;
         }
-        
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -425,52 +425,16 @@
             </div>
         </div>
     </header>
-    
+
     <!-- Projects Section -->
     <section class="container">
         <div class="section-header">
             <h2>🚀 研究项目</h2>
             <p>从仿真到真机，探索具身智能的边界</p>
         </div>
-        
-        <div class="projects-grid">
-            <!-- 项目一：Unitree G1 Sim2Real -->
-            <article class="project-card">
-                <!-- 新增：Isaac Sim 仿真视频 -->
-                <div class="project-video">
-                    <video controls>
-                        <source src="Video/isaacsim.mp4" type="video/mp4">
-                        您的浏览器不支持视频播放
-                    </video>
-                </div>
-                
-                <!-- 原有：真机部署视频 -->
-                <div class="project-video-vertical">
-                    <video controls>
-                        <source src="Video/sim2real.mp4" type="video/mp4">
-                        您的浏览器不支持视频播放
-                    </video>
-                </div>
 
-                <div class="project-content">
-                    <span class="project-tag">🦾 Sim2Real 部署</span>
-                    <h3 class="project-title">基于 Unitree G1 人形机器人的具身导航 Sim2Real 部署</h3>
-                    <p class="project-date">2025.10 - 2026.03</p>
-                    <p class="project-desc">
-                        <strong>仿真验证：</strong>在 Isaac Sim 高保真仿真环境中，智能体接收多轮自然语言指令（如“穿过客厅前往阳台的花瓶处”、“左转进入卧室停在床前”），通过大模型进行语义理解与路径规划，成功完成多房间长程导航任务。右侧终端实时显示指令解析与系统状态。<br><br>
-                        <strong>真机部署：</strong>将开源具身导航模型从 Isaac Sim 仿真环境迁移至 Unitree G1 真机，完成端到端全流程部署。设计端云协同架构，通过 ROS2 订阅 RGB-D 与里程计数据，经 Flask 与服务端模型通信，由 MPC 控制器执行运动指令。开发语音交互模块，支持多轮指令与实时语义中断。
-                    </p>
-                    <div class="project-highlights">
-                        <span class="highlight-tag">Isaac Sim</span>
-                        <span class="highlight-tag">ROS2</span>
-                        <span class="highlight-tag">MPC 控制</span>
-                        <span class="highlight-tag">语音交互</span>
-                        <span class="highlight-tag">端云协同</span>
-                    </div>
-                </div>
-            </article>
-            
-            <!-- 项目二：ReThinkNav -->
+        <div class="projects-grid">
+            <!-- 项目一：ReThinkNav -->
             <article class="project-card">
                 <div class="project-video">
                     <video controls>
@@ -498,6 +462,42 @@
                         <a href="https://github.com/damonds27/ReThinkNav" target="_blank" class="project-link primary">
                             📂 GitHub 代码
                         </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 项目二：Unitree G1 Sim2Real -->
+            <article class="project-card">
+                <!-- 新增：Isaac Sim 仿真视频 -->
+                <div class="project-video">
+                    <video controls>
+                        <source src="Video/isaacsim.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放
+                    </video>
+                </div>
+
+                <!-- 原有：真机部署视频 -->
+                <div class="project-video-vertical">
+                    <video controls>
+                        <source src="Video/sim2real.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放
+                    </video>
+                </div>
+
+                <div class="project-content">
+                    <span class="project-tag">🦾 Sim2Real 部署</span>
+                    <h3 class="project-title">基于 Unitree G1 人形机器人的具身导航 Sim2Real 部署</h3>
+                    <p class="project-date">2025.10 - 2026.03</p>
+                    <p class="project-desc">
+                        <strong>仿真验证：</strong>在 Isaac Sim 高保真仿真环境中，智能体接收多轮自然语言指令（如“穿过客厅前往阳台的花瓶处”、“左转进入卧室停在床前”），通过大模型进行语义理解与路径规划，成功完成多房间长程导航任务。右侧终端实时显示指令解析与系统状态。<br><br>
+                        <strong>真机部署：</strong>将开源具身导航模型从 Isaac Sim 仿真环境迁移至 Unitree G1 真机，完成端到端全流程部署。设计端云协同架构，通过 ROS2 订阅 RGB-D 与里程计数据，经 Flask 与服务端模型通信，由 MPC 控制器执行运动指令。开发语音交互模块，支持多轮指令与实时语义中断。
+                    </p>
+                    <div class="project-highlights">
+                        <span class="highlight-tag">Isaac Sim</span>
+                        <span class="highlight-tag">ROS2</span>
+                        <span class="highlight-tag">MPC 控制</span>
+                        <span class="highlight-tag">语音交互</span>
+                        <span class="highlight-tag">端云协同</span>
                     </div>
                 </div>
             </article>
@@ -531,63 +531,63 @@
             </article>
         </div>
     </section>
-    
+
     <!-- Publications Section -->
     <section class="publications-section">
         <div class="section-header">
             <h2>📝 发表论文</h2>
             <p>持续探索具身智能前沿</p>
         </div>
-        
+
         <div class="pub-grid">
             <div class="pub-card">
                 <span class="pub-venue first-author">ICRA 2026 · 一作</span>
                 <p class="pub-title">ReThinkNav: Zero-Shot Vision-and-Language Navigation with Open-Source LLMs via Contextual Reasoning and Loop Recovery</p>
             </div>
-            
+
             <div class="pub-card">
                 <span class="pub-venue first-author">武汉大学学报 2025 · 一作</span>
                 <p class="pub-title">以空间智能导航：基于场景图谱的目标驱动导航综述</p>
             </div>
-            
+
             <div class="pub-card">
                 <span class="pub-venue">ICRA 2026 · 二作</span>
                 <p class="pub-title">Commonsense-Guided Object Graph Reasoning with Policy Regularization for Object Goal Navigation</p>
             </div>
-            
+
             <div class="pub-card">
                 <span class="pub-venue">IEEE RA-L 2025 · 二作</span>
                 <p class="pub-title">Context-aware graph inference and generative adversarial imitation learning for object-goal navigation in unfamiliar environment</p>
             </div>
         </div>
     </section>
-    
+
     <!-- Skills Section -->
     <section class="skills-section">
         <div class="section-header">
             <h2>💡 技术栈</h2>
             <p>从算法研究到工程落地</p>
         </div>
-        
+
         <div class="skills-grid">
             <div class="skill-card">
                 <div class="skill-icon">🧭</div>
                 <h3 class="skill-title">具身导航</h3>
                 <p class="skill-desc">熟悉 VLN/ObjectNav 任务设定与评估体系，掌握大模型驱动的导航决策算法</p>
             </div>
-            
+
             <div class="skill-card">
                 <div class="skill-icon">🧠</div>
                 <h3 class="skill-title">多模态大模型</h3>
                 <p class="skill-desc">Qwen3 本地部署、CoT 提示工程、Transformer 架构、CLIP 视觉语言对齐</p>
             </div>
-            
+
             <div class="skill-card">
                 <div class="skill-icon">🤖</div>
                 <h3 class="skill-title">仿真与部署</h3>
                 <p class="skill-desc">ROS2 通信架构、Habitat-Sim、Isaac Sim、Unitree G1 真机 Sim2Real</p>
             </div>
-            
+
             <div class="skill-card">
                 <div class="skill-icon">⚡</div>
                 <h3 class="skill-title">工程能力</h3>
@@ -595,7 +595,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-links">
