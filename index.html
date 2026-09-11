@@ -248,6 +248,27 @@
             display: block;
         }
 
+        .project-video-coming-soon {
+            min-height: 260px;
+            display: grid;
+            place-items: center;
+            padding: 30px;
+            text-align: center;
+            color: #c7d2fe;
+            background:
+                radial-gradient(circle at top, rgba(99, 102, 241, 0.28), transparent 55%),
+                #111827;
+            font-size: 1.05em;
+            letter-spacing: 0.04em;
+        }
+
+        .project-video-coming-soon strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #fff;
+            font-size: 1.25em;
+        }
+
         .project-video-vertical {
             background: #000;
             display: flex;
@@ -434,6 +455,33 @@
         </div>
 
         <div class="projects-grid">
+            <!-- 智元机器人实习 -->
+            <article class="project-card">
+                <div class="project-video-coming-soon" aria-label="实习演示视频即将上线">
+                    <div>
+                        <strong>Coming soon</strong>
+                        智元机器人 VLN 数据与真机导航演示
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-tag">🤖 智元机器人 · 具身智能导航算法实习</span>
+                    <h3 class="project-title">视觉语言导航数据体系、训练评测与真机场景适配</h3>
+                    <p class="project-date">2026.06 - 至今</p>
+                    <p class="project-desc">
+                        <strong>VLN 数据体系：</strong>面向公开数据与真实部署场景的视觉域差异，构建覆盖仿真生成、真实场景重建及真机采集的 VLN 数据闭环。<br><br>
+                        <strong>仿真与真机数采：</strong>基于 NVIDIA Isaac Sim 搭建适配灵犀 X2 的高保真数采平台，对齐本体尺寸、相机高度与视场角，支持语义起终点采样、占据地图路径规划、VLM 指令生成及多 GPU 并行采集；同时设计真机数采工具链，同步记录 RGB、里程计、IMU 与控制速度并生成动作标签。<br><br>
+                        <strong>训练与场景适配：</strong>建立“数据采集—模型训练—R2R-CE 评测—失败归因”闭环，完成 Qwen3-VL-8B 训练流水线与真实场景 LoRA 后训练；使用 SHARE S20 扫描、3DGS 重建并接入 Isaac Sim，完成灵犀 X2 部署验证。
+                    </p>
+                    <div class="project-highlights">
+                        <span class="highlight-tag">4 万余条仿真轨迹</span>
+                        <span class="highlight-tag">SR 45.5% → 54.9%</span>
+                        <span class="highlight-tag">100 条真机轨迹 · SR 80%</span>
+                        <span class="highlight-tag">Qwen3-VL-8B</span>
+                        <span class="highlight-tag">Isaac Sim / LoRA / 3DGS</span>
+                    </div>
+                </div>
+            </article>
+
             <!-- 项目一：ReThinkNav -->
             <article class="project-card">
                 <div class="project-video">
