@@ -248,14 +248,16 @@
             display: block;
         }
 
-        .project-video-vertical {
+        .project-video-vertical,
+        .project-video-compact {
             background: #000;
             display: flex;
             justify-content: center;
             padding: 20px 0;
         }
 
-        .project-video-vertical video {
+        .project-video-vertical video,
+        .project-video-compact video {
             display: block;
             width: auto;
             max-width: 45%;
@@ -422,7 +424,8 @@
             .project-title {
                 font-size: 1.3em;
             }
-            .project-video-vertical video {
+            .project-video-vertical video,
+            .project-video-compact video {
                 max-width: 70%;
             }
             .skills-grid {
@@ -436,10 +439,10 @@
     <header class="hero">
         <div class="hero-content">
             <h1>👋 李奥林</h1>
-            <p class="tagline">🤖 具身智能算法工程师 · 视觉语言导航 · Sim2Real</p>
+            <p class="tagline">🤖 智元机器人 · 具身智能导航算法实习生</p>
             <p class="intro">
-                武汉大学测绘学院控制科学与工程硕士在读，专注于具身智能导航算法。
-                覆盖仿真与真机数据采集、模型训练、评测及部署的完整闭环。
+                武汉大学测绘学院控制科学与工程硕士在读，求职意向为具身智能算法工程师。
+                在智元机器人从事具身智能导航算法实习，覆盖仿真与真机数据采集、模型训练、评测及部署的完整闭环。
             </p>
             <div class="contact-badges">
                 <span class="badge">📧 liaolin@whu.edu.cn</span>
@@ -461,7 +464,7 @@
         <div class="projects-grid">
             <!-- 智元机器人实习 -->
             <article class="project-card">
-                <div class="project-video">
+                <div class="project-video project-video-compact">
                     <video controls>
                         <source src="Video/internship-x2.mp4" type="video/mp4">
                         您的浏览器不支持视频播放
@@ -560,7 +563,7 @@
 
             <!-- 项目三：视觉记忆检索导航 -->
             <article class="project-card">
-                <div class="project-video">
+                <div class="project-video project-video-compact">
                     <video controls>
                         <source src="Video/RECALLNav.mp4" type="video/mp4">
                         您的浏览器不支持视频播放
@@ -603,6 +606,11 @@
             <div class="pub-card">
                 <span class="pub-venue first-author">武汉大学学报 2025 · 一作</span>
                 <p class="pub-title">以空间智能导航：基于场景图谱的目标驱动导航综述</p>
+            </div>
+
+            <div class="pub-card">
+                <span class="pub-venue">Neural Networks 2026 · 二作 · SCI 二区 Top</span>
+                <p class="pub-title">Dual Object Graph and Bisimulation Metric for Object-Goal Navigation in Unfamiliar Environment</p>
             </div>
 
             <div class="pub-card">
