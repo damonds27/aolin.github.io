@@ -239,13 +239,20 @@
         }
 
         /* Video */
-        .project-video {
+        .project-video,
+        .project-video-vertical {
             background: #000;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
         }
 
-        .project-video video {
-            width: 100%;
+        .project-video video,
+        .project-video-vertical video {
             display: block;
+            width: auto;
+            max-width: 45%;
+            max-height: 450px;
         }
 
         .project-video-coming-soon {
@@ -267,18 +274,6 @@
             margin-bottom: 8px;
             color: #fff;
             font-size: 1.25em;
-        }
-
-        .project-video-vertical {
-            background: #000;
-            display: flex;
-            justify-content: center;
-            padding: 20px 0;
-        }
-
-        .project-video-vertical video {
-            max-width: 45%;
-            max-height: 450px;
         }
 
         /* Publications */
