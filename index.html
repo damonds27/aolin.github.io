@@ -457,11 +457,11 @@
         <div class="projects-grid">
             <!-- 智元机器人实习 -->
             <article class="project-card">
-                <div class="project-video-coming-soon" aria-label="实习演示视频即将上线">
-                    <div>
-                        <strong>Coming soon</strong>
-                        智元机器人 VLN 数据与真机导航演示
-                    </div>
+                <div class="project-video">
+                    <video controls>
+                        <source src="Video/internship-x2.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放
+                    </video>
                 </div>
                 <div class="project-content">
                     <span class="project-tag">🤖 智元机器人 · 具身智能导航算法实习</span>
@@ -550,30 +550,29 @@
                 </div>
             </article>
 
-            <!-- 项目三：多层级语义场景图视觉语言导航 -->
+            <!-- 项目三：视觉记忆检索导航 -->
             <article class="project-card">
                 <div class="project-video">
                     <video controls>
-                        <source src="Video/fsrvln.mp4" type="video/mp4">
+                        <source src="Video/RECALLNav.mp4" type="video/mp4">
                         您的浏览器不支持视频播放
                     </video>
                 </div>
                 <div class="project-content">
-                    <span class="project-tag">🧭 视觉语言导航</span>
-                    <h3 class="project-title">基于多层级语义场景图的机器人视觉语言导航</h3>
-                    <p class="project-date">2026.03 - 至今</p>
+                    <span class="project-tag">🧠 视觉记忆检索 · 真机验证</span>
+                    <h3 class="project-title">基于视觉记忆检索的机器人具身导航</h3>
+                    <p class="project-date">2026.03 - 2026.06</p>
                     <p class="project-desc">
-                        面向机器人在复杂室内环境中的自然语言目标导航任务，构建基于多层级语义场景图的视觉语言导航系统。
-                        系统从带位姿的 RGB-D 序列中进行语义建图，提取物体、区域与楼层等不同尺度的空间结构，并组织为层次化场景表示。
-                        在接收到自然语言指令后，系统先进行粗粒度空间检索，定位可能相关的区域，再结合视觉语言模型进行细粒度目标确认与导航位姿选择，从而将语言目标转化为可执行的机器人导航目标。
-                        <br><br>
-                        该项目完成了从离线语义建图、场景图可视化、自然语言目标查询，到 RViz 中导航目标点显示的完整流程，并进一步接入机器人导航模块，为真实场景下的语言交互式导航和后续在线视觉记忆研究提供基础。
+                        <strong>工作目标：</strong>针对物体移动导致视觉记忆失效的问题，构建支持目标检索与记忆更新的机器人导航系统。<br><br>
+                        <strong>方法贡献：</strong>基于 Fast-LIVO2 获取带位姿 RGB 数据，以 CLIP/SigLIP2 构建视觉记忆库；通过语言检索生成候选图像，经 VLM 确认目标并选择导航位姿，重访同一位置时以最新观测更新历史记忆。<br><br>
+                        <strong>结果验证：</strong>在 HM3D 的 10 个场景、280 条 ObjectNav 样本上，Top-5 目标召回率达 96.43%，VLM 定位成功率达 88.57%，平均目标距离为 0.39 m；在 Unitree G1 真机完成带位姿图像采集、目标检索与导航目标下发验证。
                     </p>
                     <div class="project-highlights">
-                        <span class="highlight-tag">多层级语义场景图</span>
-                        <span class="highlight-tag">视觉语言导航</span>
-                        <span class="highlight-tag">RGB-D 语义建图</span>
-                        <span class="highlight-tag">ROS2 / RViz 联调</span>
+                        <span class="highlight-tag">Fast-LIVO2</span>
+                        <span class="highlight-tag">CLIP / SigLIP2</span>
+                        <span class="highlight-tag">Top-5 召回率 96.43%</span>
+                        <span class="highlight-tag">VLM 定位 88.57%</span>
+                        <span class="highlight-tag">Unitree G1 真机验证</span>
                     </div>
                 </div>
             </article>
