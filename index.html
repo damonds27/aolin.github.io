@@ -475,8 +475,10 @@
                     <h3 class="project-title">视觉语言导航数据体系、训练评测与场景适配</h3>
                     <p class="project-date">2026.06 - 至今</p>
                     <p class="project-desc">
-                        <strong>主要任务：</strong>面向公开数据与真实部署场景的视觉域差异，构建覆盖仿真生成、真实场景重建与真机采集的 VLN 数据闭环，支撑导航模型训练、评测与场景适配。<br><br>
-                        <strong>完成工作：</strong>基于 NVIDIA Isaac Sim 搭建适配灵犀 X2 的高保真数采平台，累计生成 4 万余条轨迹；迭代 5 版数据方案，将导航成功率由 45.5% 提升至 54.9%；完成 SHARE S20 场景重建、2,334 条场景数据生成及 LoRA 后训练，模型部署至灵犀 X2 后在 100 条真机轨迹上取得 80% 成功率。
+                        <strong>工作目标：</strong>针对视觉语言导航（VLN）模型实际部署时导航效果不佳、公开数据与部署场景存在域差异的问题，主导构建覆盖仿真与真实场景重建的 VLN 数据体系。<br><br>
+                        <strong>仿真数采：</strong>基于 NVIDIA Isaac Sim 搭建适配灵犀 X2 的高保真 VLN 数采平台，对齐机器人尺寸及相机高度、视场角，支持语义起终点采样、占据地图路径规划、VLM 指令生成及 GPU 并行采集，累计采集 4 万余条轨迹。<br><br>
+                        <strong>训练评测：</strong>建立“数据采集–模型训练–Habitat Sim VLN 公共基准评测–失败归因”闭环，迭代 5 版数据方案；搭建 Qwen3-VL-8B 训练流水线，仅通过数据优化将导航成功率（SR）由 45.5% 提升至 54.9%。<br><br>
+                        <strong>场景后训练：</strong>使用 SHARE S20 扫描并完成 3DGS 重建，接入数采平台采集 2,334 条 VLN 数据；基于 LoRA 微调 Qwen3-VL-8B，部署至灵犀 X2，在 100 条真机轨迹测试中导航成功率达 80%。
                     </p>
                     <div class="project-highlights">
                         <span class="highlight-tag">4 万余条仿真轨迹</span>
